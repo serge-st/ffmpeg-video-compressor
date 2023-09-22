@@ -2,6 +2,9 @@
 # ------------------------------------------------------------------
 # Script to comperss screen recordings up to 10x
 # By Serge Stecenko
+# 
+# Dependency:
+#   https://ffmpeg.org/
 # ------------------------------------------------------------------
 
 usage() { 
