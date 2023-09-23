@@ -31,23 +31,21 @@ while getopts ":i:o:" option_type; do
             output_file_name=${OPTARG%%.*}.mp4
             ;;
         *)
-            usage
             cleanup
+            usage
             ;;
     esac
 done
 
 if [[ $OPTIND -eq 1 ]]
 then
-    usage
     cleanup
-    exit 1
+    usage
 elif [[ $OPTIND -ne 5 ]]
 then
-    usage
     cleanup
-    exit 1
+    usage
 fi
 
-ffmpeg -i "${input_file}" -vcodec libx264 -crf 23 -preset medium ${output_file_name}
+ffmpeg -i "${input_file}" -vcodec libx264 -crf 23 -preset medium "${output_file_name}"
 exit 0
