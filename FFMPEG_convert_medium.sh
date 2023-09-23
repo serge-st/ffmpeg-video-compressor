@@ -49,5 +49,5 @@ then
     exit 1
 fi
 
-ffmpeg -i ${input_file} -vcodec libx264 -crf 23 -preset medium ${output_file_name}
+ffmpeg -i "${input_file}" -vcodec libx264 -crf 23 -preset medium ${output_file_name}
 exit 0
